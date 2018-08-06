@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import Title from "./components/Title";
+import Wrapper from "./components/Wrapper";
+import Grid from "./components/Grid";
+
 
 import './App.css';
 
 class App extends Component {
+  state = {
+    letters:["k","a","t","h","y","v","a","r","b","l","e"]
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <Wrapper>
+        <Title className="row">Kathy Varble</Title>
+      <div>
+        <Grid>
+          {this.state.letters}
+          </Grid>
+ 
       </div>
+      </Wrapper>
     );
   }
 }
